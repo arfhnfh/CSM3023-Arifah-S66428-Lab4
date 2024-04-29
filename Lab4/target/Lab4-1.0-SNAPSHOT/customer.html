@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Using JSP Scripting</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        h2 {
+            font-family: Arial, sans-serif;
+            color: purple;
+        }
+        .radio-label {
+            display: flex;
+            align-items: center;
+        }
+        .radio-label input[type="radio"] {
+            order: -1; 
+            margin-right: 5px;
+        }
+        .radio-label label {
+            order: 1; /* Ensure labels appear after radio buttons */
+        }
+    </style>
+</head>
+<body>
+    <h1> Use JSP Scriptlet and JSP Expression in application</h1>
+    <form method="post" action="processCustomer.jsp">
+        <h2>Customer Discount</h2>
+        <label for="customerCode">Customer Code:</label>
+        <input type="text" id="customerCode" name="customerCode" placeholder="Key-in customer code"><br><br>
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" placeholder="Key-in quantity" min="1" required><br><br>
+        <label for="customerType">Customer Type:</label>
+       
+            <input type="radio" id="normalCustomer" name="customerType" value="1">
+            <label for="normalCustomer">Normal Customer</label>
+        
+            <input type="radio" id="privilegeCustomer" name="customerType" value="2">
+            <label for="privilegeCustomer">Privilege Customer</label>
+        
+        <br><br>
+        <button type="submit">Submit</button>
+        <button type="reset">Cancel</button>
+    </form>
+</body>
+</html>
